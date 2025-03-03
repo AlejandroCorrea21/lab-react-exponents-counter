@@ -1,17 +1,16 @@
-const Exponent = (props) => {
+const Exponent = ({ count, exponent }) => {
 
-    let num = props.count;
-    let result = num ** props.exponent;
-
+    let numero = count;
+    let resultado = numero ** exponent;
 
     return (
-
         <div className="exponent-counter-container">
-            <p className="exponent-label">{props.count}²</p>
-            <p className="exponent-result">{props.count} * {props.count} = <span className="total">{result}</span></p>
+            <p className="exponent-label">{count}²</p>
+            <p className="exponent-result">
+                {count} * {count} = <span className="total">{resultado}</span>
+            </p>
         </div>
-    )
-
+    );
 };
 
 export default Exponent;
